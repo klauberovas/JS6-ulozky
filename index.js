@@ -47,3 +47,43 @@
 // document.body.innerHTML += `3 * 7 = ${calculate(3, '*', 7)}<br>`; // vypíše výsledek 21
 // document.body.innerHTML += `10 / 4 = ${calculate(10, '+', 4)}<br>`; // vypíše výsledek 2.5
 // document.body.innerHTML += `10 - 4 = ${calculate(10, '-', 4)}<br>`; // vypíše výsledek 6
+
+// //------------------------------------------------
+// VÝPLŇOŘEZ
+// Napište funkci, která ořízne nebo prodlouží řetězec.
+// Napište funkci fillcut, která jako svůj první parametr str očekává řetězec a jako druhý parametr len kladné celé číslo. Úkolem funkce je oříznout nebo prodloužit zadaný řetězec tak, aby měl délku přesně len.
+// Pokud je vstupní řetězec delší než len, tak funkce odřízne jeho konec a vrátí výsledek.
+// Pokud je vstupní řetězec kratší než len, tak jej doplní od začátku znakem tečky a vrátí výsledek.
+// Pokud je vstupní řetězec dlouhý přesně len, funkce jej vrátí beze změny.
+// const fillcut = (str, len) => {
+//   if (str.length > len) {
+//     return str.slice(0, len);
+//   }
+//   if (str.length < len) {
+//     return str.padStart(len, '.');
+//   }
+//   return str;
+// };
+
+// document.body.innerHTML += fillcut('petr', 8) + '<br>'; // vypíše „....petr“
+// document.body.innerHTML += fillcut('petr', 3) + '<br>'; // vypíše „pet“
+// document.body.innerHTML += fillcut('petr', 4) + '<br>'; // vypíše „petr“
+
+// //--------------------------------------------
+// PŘESTUPNÝ ROK JAKO FUNKCE
+// Napište funkci, která zjistí, zda je zadaný rok přestupný.
+// Napište funkci isLeapYear, která jako svůj parametr obdrží celé číslo představující rok. Funkce vrátí true, pokud je zadaný rok přestupný. V opačném případě vrátí false.
+// const isLeapYear = (year) => {
+//   if (
+//     (year % 4 === 0 && year % 100 !== 0) ||
+//     (year % 400 === 0 && year % 100 === 0)
+//   ) {
+//     return true;
+//   }
+//   return false;
+// };
+
+// document.body.innerHTML += isLeapYear(2024) + '<br>';
+// document.body.innerHTML += isLeapYear(1900) + '<br>'; //není
+// document.body.innerHTML += isLeapYear(1700) + '<br>'; //není
+// document.body.innerHTML += isLeapYear(1988) + '<br>';
